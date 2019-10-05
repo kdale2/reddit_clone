@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Article } from './article.model';
+import { FlagServiceService } from 'src/flag-service.service';
 
 @Component({
   selector: 'app-article',
@@ -10,10 +11,12 @@ export class ArticleComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'row';
   @Input() article: Article;
+  myFlagService: FlagServiceService;
 
-  constructor() {
-    //article is populated by the Input now,
-    //so we dont need anything here
+  constructor(flagService: FlagServiceService) {
+
+    //created a service to handled flagging/downvoting articles
+    this.myFlagService = flagService;
    }
 
    voteUp(): boolean {
@@ -30,6 +33,7 @@ export class ArticleComponent implements OnInit {
      //STILL TO DO: flagArticle() calls a service function that accepts an article
      //and downvotes the article so it is the lowest voted article
      console.log("Flag button has been clicked");
+     this.myFlagService.flagArticle(this.article);
    }
 
   ngOnInit() {

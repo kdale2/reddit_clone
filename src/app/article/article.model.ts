@@ -28,6 +28,10 @@ export class Article {
         }
     }
 
+    adminPrivilege() {
+        this.role = 'administrator';
+    }
+
 
 
 }
