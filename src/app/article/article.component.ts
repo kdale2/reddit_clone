@@ -26,6 +26,12 @@ export class ArticleComponent implements OnInit {
      return false;
    }
 
+   flagArticle() {
+     //flagArticle() calls a service function that accepts an article
+     //and downvotes the article so it is the lowest voted article
+     console.log("Flag button has been clicked");
+   }
+
   ngOnInit() {
   }
 }
