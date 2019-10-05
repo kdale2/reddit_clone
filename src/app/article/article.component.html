@@ -1,4 +1,4 @@
-<div class = "four wide column center aligned votes">
+<div class = "ten wide column center aligned votes">
     <div class = "ui statistic">
         <div class = "value">
             {{ article.votes }}
@@ -14,6 +14,11 @@
     </a>
 
     <div class="meta">({{ article.domain() }})</div>
+
+    <!-- this works. Need to turn it into a button-->
+    <div *ngIf = "article.role === 'administrator'">
+        Flag Button.</div>
+
 
     <ul class = "ui big horizontal list voters">
         <li class="item">
