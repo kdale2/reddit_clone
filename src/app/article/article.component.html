@@ -15,7 +15,7 @@
 
     <div class="meta">({{ article.domain() }})</div>
 
-    <!-- this works. Need to turn it into a button-->
+    <!-- this works. -->
     <button (click)="flagArticle()" *ngIf = "article.role === 'administrator'">
         Flag Article</button>
 

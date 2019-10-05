@@ -27,7 +27,7 @@ export class ArticleComponent implements OnInit {
    }
 
    flagArticle() {
-     //flagArticle() calls a service function that accepts an article
+     //STILL TO DO: flagArticle() calls a service function that accepts an article
      //and downvotes the article so it is the lowest voted article
      console.log("Flag button has been clicked");
    }
