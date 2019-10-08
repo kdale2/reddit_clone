@@ -19,6 +19,7 @@ export class AppComponent {
       ];
     }
 
+    //issue is when a new article is added, it is always 'user' role
     addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
       console.log(`Adding article title: ${title.value} and link: ${link.value}`);
       this.articles.push(new Article(title.value, link.value, 'user', 0));

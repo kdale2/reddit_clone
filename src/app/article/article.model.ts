@@ -1,4 +1,5 @@
 export class Article {
+    
     title: string;
     link: string;
     votes: number;
@@ -28,6 +29,7 @@ export class Article {
         }
     }
 
+    //grant admin privilege by changing role
     adminPrivilege() {
         this.role = 'administrator';
     }

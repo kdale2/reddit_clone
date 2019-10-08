@@ -15,8 +15,9 @@ export class ArticleComponent implements OnInit {
 
   constructor(flagService: FlagServiceService) {
 
-    //created a service to handled flagging/downvoting articles
+    //created a service to handle flagging/downvoting articles
     this.myFlagService = flagService;
+    
    }
 
    voteUp(): boolean {
@@ -30,7 +31,7 @@ export class ArticleComponent implements OnInit {
    }
 
    flagArticle() {
-     //STILL TO DO: flagArticle() calls a service function that accepts an article
+     //calls a service function that accepts an article
      //and downvotes the article so it is the lowest voted article
      console.log("Flag button has been clicked");
      this.myFlagService.flagArticle(this.article);

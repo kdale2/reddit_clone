@@ -15,7 +15,7 @@
 
     <div class="meta">({{ article.domain() }})</div>
 
-    <!-- if role is admin, flag button is loaded & calls flag method-->
+    <!-- if role is admin, flag button is loaded & calls flag method when clicked-->
     <button (click)="flagArticle()" *ngIf = "article.role === 'administrator'">
         Flag Article</button>
 

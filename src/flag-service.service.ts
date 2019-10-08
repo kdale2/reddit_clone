@@ -13,11 +13,14 @@ export class FlagServiceService {
 
    flagArticle(article: Article) {
      
-     //currently this just downvotes it by 3
+     //currently this just downvotes it a few times which wont always work
      console.log("article being flagged by service method")
      this.article = article;
      this.article.voteDown();
      this.article.voteDown();
      this.article.voteDown();
+     this.article.voteDown();
+
+
    }
 }
