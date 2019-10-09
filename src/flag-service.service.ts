@@ -13,14 +13,16 @@ export class FlagServiceService {
 
    flagArticle(article: Article) {
      
-     //currently this just downvotes it a few times which wont always work
+     //when flag button is pressed, this method is called
+     //which downvotes the flagged article
      console.log("article being flagged by service method")
      this.article = article;
      this.article.voteDown();
      this.article.voteDown();
      this.article.voteDown();
      this.article.voteDown();
-
+     this.article.voteDown();
+     this.article.voteDown();
 
    }
 }
